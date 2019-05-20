@@ -1,14 +1,34 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Search Tafseer
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="TafseerSearch">
+  <ion-list>
+    <ion-item>
+      <ion-label>Select Surah</ion-label>
+      <ion-select [(ngModel)]="surah">
+        <ion-option value="nes">1 - الفاتحة</ion-option>
+      </ion-select>
+    </ion-item>
+	
+	<ion-item>
+      <ion-label>Select Ayat</ion-label>
+      <ion-select [(ngModel)]="surah">
+        <ion-option value="nes">All</ion-option>
+      </ion-select>
+    </ion-item>
+	
+<ion-item>
+    <ion-label color="primary" stacked>Search By Keyword</ion-label>
+    <ion-input type="email" placeholder="Please type keyword in Urdu"></ion-input>
+  </ion-item>
+  
+  </ion-list>
+  
+  <button ion-button color="dark">Show</button>
+  <button class="resetBtn" ion-button>Reset Fields</button>
 </ion-content>
